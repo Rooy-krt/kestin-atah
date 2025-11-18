@@ -573,53 +573,58 @@
 <!-- BOOK NOW MODAL -->
 <div class="modal fade" id="bookNowModal" tabindex="-1" aria-labelledby="bookNowModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-3">
+      <div class="modal-content rounded-4">
 
-      <div class="modal-header">
-        <h5 class="modal-title" id="bookNowModalLabel">Book Now</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header">
+              <h5 class="modal-title" id="bookNowModalLabel">Book a Seat — ATAH Concert</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+
+              <form id="atahBookingForm">
+
+                  <div class="mb-3">
+                      <label class="form-label fw-bold">Full Name</label>
+                      <input type="text" class="form-control" placeholder="Enter your full name" required>
+                  </div>
+
+                  <div class="mb-3">
+                      <label class="form-label fw-bold">Phone Number</label>
+                      <input type="text" class="form-control" placeholder="07XX XXX XXX" required>
+                  </div>
+
+                  <div class="mb-3">
+                      <label class="form-label fw-bold">Email Address (optional)</label>
+                      <input type="email" class="form-control" placeholder="example@gmail.com">
+                  </div>
+
+                  <div class="mb-3">
+                      <label class="form-label fw-bold">Number of Seats</label>
+                      <select class="form-control" required>
+                          <option value="" selected disabled>Choose...</option>
+                          <option>1 Seat</option>
+                          <option>2 Seats</option>
+                          <option>3 Seats</option>
+                          <option>4 Seats</option>
+                      </select>
+                  </div>
+
+                  <button 
+                      type="submit" 
+                      class="btn btn-primary w-100 py-2 rounded-pill"
+                      style="font-weight:600;"
+                  >
+                      Confirm Booking
+                  </button>
+
+              </form>
+
+          </div>
+
       </div>
-
-      <div class="modal-body">
-        <form>
-
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" placeholder="Enter your name">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Phone Number</label>
-            <input type="text" class="form-control" placeholder="Enter your phone">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Service / Appointment</label>
-            <select class="form-control">
-              <option>Select</option>
-              <option>Prayer Session</option>
-              <option>Counselling</option>
-              <option>Worship Training</option>
-            </select>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Message</label>
-            <textarea class="form-control" rows="3" placeholder="Optional message"></textarea>
-          </div>
-
-        </form>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Submit</button>
-      </div>
-
-    </div>
   </div>
 </div>
-
         
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
@@ -686,4 +691,5 @@
     </body>
 
 </html>
+
 
