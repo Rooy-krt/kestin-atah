@@ -158,6 +158,10 @@
                             destinies rekindled, and believers awakened
                             to their identity in Christ.</p>
                         <a href="#" class="btn btn-primary rounded-pill py-3 px-5">Read More</a>
+                        <!-- Countdown Timer -->
+<div id="countdown" 
+     style="margin-top:20px; font-size:22px; font-weight:bold; color:#ff5722;">
+</div>
                     </div>
                 </div>
             </div>
@@ -687,9 +691,34 @@
             mobileNavOverlay.classList.remove('active');
         });
     </script>
+        <script>
+// Set the event date here (YEAR, MONTH-1, DAY, HOUR, MINUTE)
+var eventDate = new Date("2025-01-20T17:00:00").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = eventDate - now;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Event Started!";
+        return;
+    }
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s ";
+}, 1000);
+</script>
+
     
     </body>
 
 </html>
+
 
 
