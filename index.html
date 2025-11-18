@@ -725,9 +725,10 @@
             mobileNavOverlay.classList.remove('active');
         });
     </script>
-        <script>
-// Set the event date here (YEAR, MONTH-1, DAY, HOUR, MINUTE)
-var eventDate = new Date("2026-01-20T17:00:00").getTime();
+<!-- Countdown Script -->
+<script>
+// Set your event date here
+var eventDate = new Date("2025-01-20T17:00:00").getTime();
 
 var x = setInterval(function() {
     var now = new Date().getTime();
@@ -735,7 +736,8 @@ var x = setInterval(function() {
 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Event Started!";
+        document.getElementById("countdown").innerHTML =
+            "<div style='font-size:24px; font-weight:bold; color:#5b3a29;'>Event Started!</div>";
         return;
     }
 
@@ -744,8 +746,11 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerHTML =
-        days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s ";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
 }, 1000);
 </script>
 
@@ -753,6 +758,7 @@ var x = setInterval(function() {
     </body>
 
 </html>
+
 
 
 
