@@ -116,6 +116,17 @@
     data-bs-toggle="modal" 
     data-bs-target="#bookNowModal"
 >
+                            <!-- Mobile Short Intro + Read More Button -->
+<div class="mobile-hero-short d-lg-none">
+    <p class="fs-5 text-dark mb-3">
+        ATAH is a God-ordained movement calling believers into deep and personal intimacy with Him.
+    </p>
+
+    <button class="btn btn-primary rounded-pill px-4 py-2" id="openBubbleModal">
+        Read More
+    </button>
+</div>
+
 Register for ATAH</button>
 
                     </div>
@@ -758,26 +769,56 @@ var x = setInterval(function() {
 
 }, 1000);
 </script>
-<!-- Mobile JS for Modal, Menu & Animations -->
-<script src="js/mobile.js"></script>
+        <script>
+    const bubbleModal = document.getElementById('bubbleModal');
+    const openBubbleBtn = document.getElementById('openBubbleModal');
+    const closeBubbleBtn = document.getElementById('closeBubbleModal');
 
-    <!-- Mobile Bubble Modal -->
-<div id="mobileHeroModal" class="mobile-bubble-modal">
-    <div class="mobile-bubble-content">
-        <button class="close-bubble" id="closeBubbleBtn">&times;</button>
-        <h2>ATAH – Intimacy With God</h2>
-        <p>
-            The Ministry is a God-ordained movement birthed with one core mandate: to draw people 
-            into deep, personal, and unbroken communion with the Father. The name ATAH, meaning 
-            “Intimacy with God,” reflects our conviction that true transformation flows from closeness 
-            with Jesus — not religion, not routine, but relationship.
+    if (openBubbleBtn) {
+        openBubbleBtn.addEventListener('click', () => {
+            bubbleModal.classList.add('active');
+        });
+    }
+
+    if (closeBubbleBtn) {
+        closeBubbleBtn.addEventListener('click', () => {
+            bubbleModal.classList.remove('active');
+        });
+    }
+
+    window.addEventListener('click', (e) => {
+        if (e.target === bubbleModal) {
+            bubbleModal.classList.remove('active');
+        }
+    });
+</script>
+
+<!-- Bubbly Blob Modal -->
+<div id="bubbleModal" class="bubble-modal d-lg-none">
+    <div class="bubble-content">
+        <button class="bubble-close" id="closeBubbleModal">&times;</button>
+
+        <h3 class="text-primary mb-3">Intimacy With God</h3>
+
+        <p class="fs-6">
+            The Ministry is a God-ordained movement birthed to draw people into deep, personal
+            and unbroken communion with the Father. ATAH reflects our conviction that real
+            transformation flows not from religion, but from relationship with Jesus.  
+        </p>
+
+        <p class="fs-6">
+            We steward a divine calling: to awaken hearts, restore devotion, and rebuild the
+            altar of intimacy in this generation through worship, impartation and spiritual
+            awakening.
         </p>
     </div>
 </div>
 
+
     </body>
 
 </html>
+
 
 
 
