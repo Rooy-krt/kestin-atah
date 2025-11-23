@@ -1054,3 +1054,76 @@
         color: #000; /* adjust to match your theme */
     }
 }
+/* MOBILE HERO IMPROVEMENTS */
+@media (max-width: 767px) {
+    .hero-header h1 {
+        font-size: 1.9rem !important;
+        line-height: 1.3;
+    }
+
+    .hero-header p {
+        display: none; /* hide long paragraphs */
+    }
+
+    .mobile-hero-short {
+        display: block !important;
+        animation: fadeIn 0.4s ease;
+    }
+}
+
+/* BUBBLE MODAL */
+.bubble-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    z-index: 99999;
+}
+
+.bubble-modal.active {
+    display: flex;
+}
+
+/* Bubble container */
+.bubble-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 360px;
+    position: relative;
+    animation: popIn 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Bubble animation */
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Close button */
+.bubble-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.4rem;
+    line-height: 0.9;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
