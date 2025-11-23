@@ -1,6 +1,6 @@
-/* ------------------------------
-   MOBILE OVERRIDES & APP STYLING
---------------------------------*/
+/* ----------------------------------------------------
+   MOBILE OVERRIDES & APP STYLING (YOUR ORIGINAL CODE)
+-------------------------------------------------------*/
 @media (max-width: 768px) {
 
     /* General spacing */
@@ -75,7 +75,7 @@
 
     @keyframes bubbleOpen {
         0% { transform: scale(0.6); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(1); opacity: 1); }
     }
 
     @keyframes bubblePop {
@@ -92,4 +92,55 @@
         from { transform: translateX(100%); }
         to { transform: translateX(0); }
     }
+
+    /* ------------------------------------
+       MOBILE HERO IMAGE (APP STYLE)
+    -------------------------------------*/
+    .hero-image img {
+        max-width: 320px;
+        border-radius: 22px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        padding: 6px;
+        margin: 0 auto;
+        display: block;
+        background: #fff;
+    }
+
+    /* Stack hero layout on mobile */
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 25px;
+        padding: 25px 0;
+    }
+}
+
+/* ----------------------------------------------------
+   DESKTOP HERO SECTION — MODERN APP STYLE
+-------------------------------------------------------*/
+
+/* Wrapper layout */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+/* Desktop hero image styling */
+.hero-image img {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 28px;
+    object-fit: cover;
+    background: #ffffff;
+    padding: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.18);
 }
