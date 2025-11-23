@@ -1,0 +1,95 @@
+/* ------------------------------
+   MOBILE OVERRIDES & APP STYLING
+--------------------------------*/
+@media (max-width: 768px) {
+
+    /* General spacing */
+    body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #fafafa;
+        overflow-x: hidden;
+    }
+
+    /* Hide desktop long text */
+    .hero-header p.fs-4 {
+        display: none;
+    }
+
+    /* Show mobile short text */
+    .hero-short-text {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        display: block;
+        animation: fadeInUp 0.6s ease;
+    }
+
+    /* Read More button */
+    .mobile-read-more {
+        animation: bubblePop 0.5s ease;
+    }
+
+    /* ------------------------------
+       BUBBLE MODAL
+    -------------------------------*/
+    .mobile-bubble-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.55);
+        backdrop-filter: blur(6px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        padding: 20px;
+    }
+
+    .mobile-bubble-content {
+        background: white;
+        width: 90%;
+        max-width: 420px;
+        padding: 25px;
+        border-radius: 30px;
+        position: relative;
+        animation: bubbleOpen 0.45s ease;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .close-bubble {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 26px;
+        background: none;
+        border: none;
+        color: #444;
+    }
+
+    /* ------------------------------
+       MOBILE ANIMATIONS
+    -------------------------------*/
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bubbleOpen {
+        0% { transform: scale(0.6); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes bubblePop {
+        0% { transform: scale(0.8); }
+        100% { transform: scale(1); }
+    }
+
+    /* Mobile nav overlay animations */
+    #mobileNav {
+        animation: slideIn 0.4s ease;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateX(100%); }
+        to { transform: translateX(0); }
+    }
+}
