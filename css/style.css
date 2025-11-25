@@ -325,6 +325,44 @@
     z-index: 2;
 }
 
+    body {
+        font-size: 14px;
+        font-family: "Raleway", sans-serif;
+        color: #48101b !important;
+        background: #fafafa;
+    }
+
+    h1, .display-4, .display-5, .display-6 {
+        font-size: 28px !important;
+        font-family: "Castle Rocks", serif !important;
+        color: #48101b !important;
+    }
+
+    h2 { 
+        font-size: 22px !important;
+        font-family: "Castle Rocks", serif !important;
+        color: #48101b !important;
+    }
+
+    h3 { 
+        font-size: 20px !important;
+        font-family: "Castle Rocks", serif !important;
+        color: #48101b !important;
+    }
+
+    h4 { 
+        font-size: 18px !important;
+        font-family: "Castle Rocks", serif !important;
+        color: #48101b !important;
+    }
+
+    p, .fs-4 {
+        font-size: 15px !important;
+        font-family: "Raleway", sans-serif !important;
+        color: #000000 !important;
+    }
+
+
 
 @keyframes RotateMoveSingle {
     0% {
@@ -1320,3 +1358,4 @@
         color: #48101b !important;
     }
 }
+
